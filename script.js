@@ -33,13 +33,13 @@ textBox.addEventListener("click", function() {
   <button id="button2" onclick="showPlayer()">Show Music Control</button>
   <div id="audio-player" style="display: none;">
     <audio controls id="audio">
-        <source src="song1.mp3" type="audio/mpeg">
+        <source src="music.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
   </div>
   
   <script>
-    var songs = ["song1.mp3", "song2.mp3", "song3.mp3", "song4.mp3"];
+    var songs = ["music.mp3", "music2.mp3", "music3.mp3", "music4.mp3"];
     var currentSong = 0;
     var audio = document.getElementById("audio");
 
