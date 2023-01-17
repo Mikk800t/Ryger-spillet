@@ -28,13 +28,33 @@ textBox.addEventListener("click", function() {
 <html>
 <head>
   <title>Background Music</title>
-  <script>
-    var audio = new Audio("music.mp3");
-    audio.loop = true;
-    audio.play();
-  </script>
 </head>
 <body>
-  <!-- Your HTML content goes here -->
+  <button id="button2" onclick="showPlayer()">Show Music Control</button>
+  <div id="audio-player" style="display: none;">
+    <audio controls id="audio">
+        <source src="song1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+  </div>
+  
+  <script>
+    var songs = ["song1.mp3", "song2.mp3", "song3.mp3", "song4.mp3"];
+    var currentSong = 0;
+    var audio = document.getElementById("audio");
+
+    function showPlayer() {
+        document.getElementById("audio-player").style.display = "block";
+        audio.src = songs[currentSong];
+        audio.play();
+    }
+
+    audio.addEventListener("ended", function(){
+        currentSong = (currentSong + 1) % songs.length;
+        audio.src = songs[currentSong];
+        audio.play();
+    });
+  </script>
 </body>
 </html>
+
