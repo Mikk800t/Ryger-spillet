@@ -24,3 +24,17 @@ textBox.addEventListener("click", function() {
 });
 
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Background Music</title>
+  <script>
+    var audio = new Audio("music.mp3");
+    audio.loop = true;
+    audio.play();
+  </script>
+</head>
+<body>
+  <!-- Your HTML content goes here -->
+</body>
+</html>
