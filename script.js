@@ -22,39 +22,3 @@ button2.addEventListener("click", function() {
 textBox.addEventListener("click", function() {
   textBox.style.display = "none";
 });
-
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Background Music</title>
-</head>
-<body>
-  <button id="button2" onclick="showPlayer()">Show Music Control</button>
-  <div id="audio-player" style="display: none;">
-    <audio controls id="audio">
-        <source src="music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-  </div>
-  
-  <script>
-    var songs = ["music.mp3", "music2.mp3", "music3.mp3", "music4.mp3"];
-    var currentSong = 0;
-    var audio = document.getElementById("audio");
-
-    function showPlayer() {
-        document.getElementById("audio-player").style.display = "block";
-        audio.src = songs[currentSong];
-        audio.play();
-    }
-
-    audio.addEventListener("ended", function(){
-        currentSong = (currentSong + 1) % songs.length;
-        audio.src = songs[currentSong];
-        audio.play();
-    });
-  </script>
-</body>
-</html>
-
