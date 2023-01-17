@@ -10,7 +10,7 @@ const audio = document.getElementById("audio");
 const nextButton = document.getElementById("next-button");
 
 let currentSong = 0;
-let songs = ["music1.mp3", "music2.mp3", "music3.mp3"];
+let songs = ["music4.mp3", "music2.mp3", "music3.mp3"];
 
 audio.src = songs[currentSong];
 
