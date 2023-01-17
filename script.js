@@ -1,7 +1,7 @@
 const randomButton = document.getElementById("random-button");
 const result = document.getElementById("result");
 const items = ["Gnist", "3x2 10", "Kongesug", "Håndbong", "5x15", "3x12", "4x12", "1 Sug", "2 Sug", "3 Sug", "4 Sug", "5 Sug", "6 Sug", "Bob Marley (Den Normale)", "Lyskryds", "Tænkeboks", "3x10", "Ninja", "Bob Marley (Den lange)"];
-const songs = ["song1.mp3", "song2.mp3", "song3.mp3", "song4.mp3"];
+const songs = ["music.mp3", "music2.mp3", "music3.mp3", "music4.mp3"];
 const audio = new Audio();
 
 // Add the playMusic function
