@@ -10,7 +10,7 @@ function playMusic(index) {
   audio.play();
 }
 
-randomButton.addEventListener("click", function() {
+button2.addEventListener("click", function() {
   let randomIndex = Math.floor(Math.random() * items.length);
   result.textContent = items[randomIndex];
   playMusic(randomIndex);
@@ -21,9 +21,6 @@ const button2 = document.getElementById("button2");
 const textBox = document.getElementById("text-box");
 
 button1.addEventListener("click", function() {
-  textBox.style.display = "block";
-});
-button2.addEventListener("click", function() {
   textBox.style.display = "block";
 });
 
