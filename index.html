@@ -26,13 +26,34 @@ Tænker nok den eneste ting folk ik forstår er
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Background Music</title>
+  <title>Background Music Playlist</title>
+  <script>
+    var songs = ["music.mp3", "music2.mp3", "music3.mp3", "music4.mp3"];
+    var currentSong = 0;
+    var audio = new Audio(songs[currentSong]);
+    audio.loop = false;
+
+    function playNext() {
+        currentSong = (currentSong + 1) % songs.length;
+        audio.src = songs[currentSong];
+        audio.play();
+    }
+
+    function showPlayer() {
+        document.getElementById("audio-player").style.display = "block";
+    }
+  </script>
 </head>
 <body>
-  <audio controls autoplay loop>
-    <source src="music.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
   <!-- Your HTML content goes here -->
+  <button button2="showPlayer()">Show Music Player</button>
+  <div id="audio-player" style="display: none;">
+    <audio controls>
+        <source src="song1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button button2="playNext()">Next Song</button>
+  </div>
 </body>
 </html>
+
